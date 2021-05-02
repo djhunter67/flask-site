@@ -1,0 +1,8 @@
+# IGNORE THESE FILES #
+######################
+
+__pycache__
+.vscode
+venv
+cvh/__pycache__
+cvh/keyfile.txt

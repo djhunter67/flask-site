@@ -1,0 +1,60 @@
+$font-stack: Arial,
+Helvetica,
+sans-serif;
+$secondary-color: coral;
+$primary-color:blue;
+$tertiary-color:lightgrey;
+$letter-color:black;
+$bck-img: url("../img/bck_img.jpg");
+$foot-img: url("../img/row-computers-mod.png");
+$python-img: url("../img/python_img_thmb.png");
+$java-im: url("../img/java_clr_bck_thmb.png");
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.secondary {
+    color: set=set-text-color($secondary-color);
+}
+
+@function set-text-color($color) {
+    @if (lightness($color)>40%) {
+        @return #000;
+    }
+    @else {
+        @return #fff;
+    }
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin mobile {
+    @media(max-width: 700px) {
+        @content
+    }
+}
+
+@function is-direction($value) {
+    $is-keyword: index((to top, to top right, to right top, to right, to bottom right, to right bottom, to bottom, to bottom left, to left bottom, to left, to left top, to top left), $value);
+    $is-angle: type-of($value)=='number' and index('deg' 'grad' 'turn' 'rad', unit($value));
+    @return $is-keyword or $is-angle;
+}
+
+@mixin linear-gradient($direction,
+$color-stops...) {
+    @if is-direction($direction)==false {
+        $color-stops: $direction, $color-stops;
+        $direction: 180deg;
+    }
+    background: nth(nth($color-stops,
+    1),
+    1);
+    background: -webkit-linear-gradient(legacy-direction($direction),
+    $color-stops);
+    background: linear-gradient($direction,
+    $color-stops);
+}

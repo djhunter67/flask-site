@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Christerpher Hunter's personal website">
+    <meta name="keywords" content="Christerpher Hunter, website, personal website">
+    <meta charset="UTF-8">
+    <meta name="author" content="Christerpher Hunter">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/script.js') }}">
+
+</head>
+
+<body class="index">
+    <nav class="index__nav">
+        <ul>
+            <li class="index__nav__list"><a href="/">home</a></li>
+            <li class="index__nav__list"><a href="/projects">projects</a></li>
+            <li class="index__nav__list"><a href="/about">about</a></li>
+        </ul>
+    </nav>
+    <div class=" main-content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <a class="fixed-me button" href="/">Home</a>
+    <footer id="main-footer">
+        Thanks for visiting, contact me at:
+        <br>
+        <email>djhunter67@gmail.com</email>
+        <br>Copyright &copy; 2021, Christerpher Hunter's Website
+        <br><small>made from scratch</small>
+    </footer>
+</body>
+
+
+
+</html>

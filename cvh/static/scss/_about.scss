@@ -1,0 +1,27 @@
+.about {
+    padding-bottom: 2rem;
+    justify-content: center;
+    height: 100%;
+    &__bio__image {
+        height: 50vh;
+        width: 100%;
+        background-image: $bck-img;
+        background-size: cover;
+        background-color: linear-gradient(rbga(243, 79, 243, 0.9), rgba(238, 235, 87, 0.3));
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    &__bio {
+        width: 80%;
+        text-align: center;
+        .secondary {
+            padding-bottom: 1rem;
+        }
+        p {
+            @include linear-gradient(rgba(231, 140, 140, 0.61), rgb(255, 255, 255));
+            color: $letter-color;
+        }
+    }
+}

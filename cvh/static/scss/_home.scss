@@ -1,0 +1,20 @@
+.home {
+    height: 100vh;
+    &__header {
+        h1 {
+            color: $secondary-color;
+        }
+    }
+    &__icons {
+        &__row {
+            justify-items: center;
+            display: inline;
+            &__col-sm {
+                justify-items: center;
+            }
+        }
+    }
+    &__art {
+        justify-content: center;
+    }
+}

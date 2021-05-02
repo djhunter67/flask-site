@@ -1,0 +1,59 @@
+@import "config";
+@import "home";
+@import "projects";
+@import "about";
+@import "game";
+.index {
+    height: 100vh;
+    line-height: 1.6em;
+    &__nav {
+        font-family: $font-stack;
+        @include linear-gradient(to right, rgb(255, 228, 105), rgb(172, 10, 172));
+        padding: 10px 0;
+        &__list {
+            list-style: none;
+            display: inline;
+            font-size: large;
+            border: 1px solid black;
+            border-radius: 4px;
+            padding: 8px;
+        }
+    }
+}
+
+#main-footer {
+    font-size: 1rem;
+    position: static;
+    bottom: 0;
+    text-align: center;
+    padding: 1rem;
+    color: set-text-color($letter-color);
+    @include linear-gradient(to right, rgb(255, 228, 105), rgb(172, 10, 172));
+    width: 100%;
+    margin-top: 40px;
+}
+
+.button {
+    color: set-text-color($letter-color);
+    background-color: blue;
+    border: 1px solid set-text-color($letter-color);
+    border-radius: 14px;
+    padding: 2px 5px;
+    text-align: center;
+    font-size: 16px;
+    &:hover {
+        border: solid 0.5px red;
+        cursor: pointer;
+        color: darken(green, 30%);
+        @include transition-ease;
+    }
+}
+
+.fixed-me {
+    position: fixed;
+    top: 66%
+}
+
+@include mobile {
+    flex-direction: column;
+}

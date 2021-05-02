@@ -1,0 +1,39 @@
+{% extends "index.html" %} {% block content %}
+
+<body class="home">
+    <header container="home__header">
+        <h1>Christerpher Hunter</h1><br>
+        <h3><i>Welcome</i></h3>
+    </header>
+    <br>
+    <div>
+        <br>
+        <a class="button" href="/game">Play Me!</a>
+    </div>
+    <br>
+    <aside class="home__icons">
+        <label for="choice">Choose which type of projects to view:</label>
+        <div class="home__icons__row">
+            <div class="home__row__col-sm">
+                <a href="/static/img/python_img.png" target="_blank">
+                    <img src="/static/img/python_img.png" class="img-thumbnail" width=200 alt="Python">
+                </a>
+            </div>
+            <div class="home__icons__row__col-sm">
+                <a href="/static/img/python_img.png" target="_blank">
+                    <img src="/static/img/java-logo-1.png" class="img-thumbnail" width=200 height=200 alt="Java">
+                </a>
+            </div>
+        </div>
+    </aside>
+    <div class="clr"></div>
+    <br>
+    <article class="home__art">
+        <p>As a hobby I enjoy coding, building pc's, welding, and routine maintenance on hardware, software, and automobiles. Under coding I am knowledgable in Python, Java, and C/C++. I have employed databases and have written several machine learning scripts.
+            My personal computer has <a href="/static/img/7_monitor_setup.jpg" target="_blank">seven monitors</a> which has increased my personal productivity several fold. I enjoy welding for the same reason I enjoy programming. Taking a set of tools
+            and creating something, modifying, and/or repairing calls forward a sense of accomplishment worth seeking.
+        </p>
+        <p>My name is <a href="/about"><strong>Christerpher Hunter</strong></a> and I am an Arizona State University graduate of the Ira. A. Fulton School of Engineering with a Bachelors Degree of Electrical Engineering.
+        </p>
+</body>
+{% endblock %}
