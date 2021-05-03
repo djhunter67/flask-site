@@ -15,6 +15,10 @@ $java-im: url("../img/java_clr_bck_thmb.png");
     padding: 0;
 }
 
+.clr {
+    clear: all;
+}
+
 .secondary {
     color: set=set-text-color($secondary-color);
 }
@@ -57,4 +61,14 @@ $color-stops...) {
     $color-stops);
     background: linear-gradient($direction,
     $color-stops);
+}
+
+@mixin grid($cols,
+$mgn) {
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% -(($cols - 1) *$mgn)) / $cols);
+    &:nth-child( #{$cols}n) {
+        margin-right: 0;
+    }
 }

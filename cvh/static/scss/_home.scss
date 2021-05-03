@@ -7,10 +7,9 @@
     }
     &__icons {
         &__row {
-            justify-items: center;
-            display: inline;
+            @include grid(2, 4%);
             &__col-sm {
-                justify-items: center;
+                width: 100%;
             }
         }
     }

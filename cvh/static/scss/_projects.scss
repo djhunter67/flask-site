@@ -1,63 +1,7 @@
 .projects {
-    height: 100vh;
-    &__grid__a {
-        display: grid;
-        grid-template-columns: 15% 15% 15% 15% 15% 15%;
-        grid-template-rows: auto;
-        grid-template-areas: "head11 head12 head13 head14" "main21 main22 main23 main24" "main31 main32 main33 main34" "foot41 foot42 foot43 foot44";
-        &__p1 {
-            border: solid 1px black;
-            width: 15%;
-            grid-column: 1;
-        }
-        &__p2 {
-            border: solid 1px black;
-            width: 15%;
-            grid-column: 2;
-        }
-        &__p3 {
-            border: solid 1px black;
-            width: 15%;
-            grid-column: 3;
-        }
-        &__p4 {
-            border: solid 1px black;
-            width: 15%;
-            grid-column: 4;
-        }
-        &__p5 {
-            border: solid 1px black;
-            width: 15%;
-            grid-column: 5;
-        }
-        &__p6 {
-            border: solid 1px black;
-            width: 15%;
-            grid-column: 6;
-        }
-        &__j1 {
-            border: solid 1px red;
-            width: 15%;
-        }
-        &__j2 {
-            border: solid 1px red;
-            width: 15%;
-        }
-        &__j3 {
-            border: solid 1px red;
-            width: 15%;
-        }
-        &__j4 {
-            border: solid 1px red;
-            width: 15%;
-        }
-        &__j5 {
-            border: solid 1px red;
-            width: 15%;
-        }
-        &__j6 {
-            border: solid 1px red;
-            width: 15%;
-        }
+    @include grid(6, 8%);
+    //&__grid__a {}
+    img {
+        width: 100%;
     }
 }
