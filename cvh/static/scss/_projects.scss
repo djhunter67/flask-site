@@ -1,7 +1,17 @@
 .projects {
-    @include grid(6, 8%);
-    //&__grid__a {}
+    display: flex;
+    text-align: center;
+    ul {
+        padding: 10px;
+        flex-basis: 15%;
+        border: 1px solid black;
+    }
+    &__grid__a {}
+    &__grid__b {}
+    &__grid__c {}
+    &__grid__d {}
     img {
-        width: 100%;
+        padding: 20px;
+        margin: 5px;
     }
 }
