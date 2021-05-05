@@ -1,3 +1,20 @@
 .game {
     height: 100vh;
+    &__place {
+        border: solid 1px black;
+        width: 90vw;
+        height: 90vh;
+        font-size: 38px;
+        margin: 50px;
+        padding: 25px;
+        #null {
+            color: red;
+        }
+        #number {
+            color: green;
+        }
+        label {
+            color: $letter-color;
+        }
+    }
 }
