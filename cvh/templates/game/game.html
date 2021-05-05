@@ -9,7 +9,10 @@
             <input type="submit" , value="submit" />
             <br>
             <br> {% if not info %}
-            <span id="null">{{ game_holder }}</span> {{ info }} {% else %} <span id="number">{{ game_holder }}</span> {{ info }}{% endif %}
+            <span id="null">{{ game_holder }}</span> {{ info }} {% else %} <span id="number">The {{number}}th number of the
+                Fibbonaci sequence: {{ game_holder }}</span> {{ info }}{% endif %}
+            <br>
+            <br> time to calc: {{time}}
         </form>
     </div>
 

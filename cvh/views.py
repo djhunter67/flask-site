@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, request
-from torch import tensor
+from game.game_tab import game_file, dev, info, time_to_calc
 
 # from .models import Data
 # from . import db
@@ -24,26 +24,25 @@ def about():
 
 @views.route("/game", methods=["GET", "POST"])
 def game():
-    from torch import cuda, device, LongTensor, from_numpy
+    from torch import from_numpy
     from numpy import array
-    GPU = "0"  # 0: 2080TI;  1: P2000
-    dev = device("cuda:" + GPU if cuda.is_available() else "cpu")
-    info = f"Executing via: {dev}"
-   
-    def game_file(n):
-        # Recursive Fibonacci as a placeholder for a game
-        #
-        if n <= 1:
-            return n
-        else:
-            return (game_file(n - 1) + game_file(n - 2))
+
     
+
     if request.method == "GET":
         return render_template("game/game.html")
     elif request.method == "POST":
         try:
-            torch_val = from_numpy(array(int(request.form["value"]))).to(dev)
+            input_val = int(request.form["value"])
+            if input_val > 50:
+                return render_template(
+                    "game/game.html", game_holder="ENTER AN INTEGER LESS THAN 51", info=""
+                )
+            torch_val = from_numpy(array(input_val)).to(dev)
             val = game_file(torch_val.item())
-            return render_template("game/game.html", game_holder=f"{val:,}", info=info)
+            return render_template(
+                "game/game.html", game_holder=f"{val:,}", info=info, number=input_val, time=time_to_calc)
         except:
-            return render_template("game/game.html", game_holder="INVALID INPUT", info="")
+            return render_template(
+                "game/game.html", game_holder="INVALID INPUT", info=""
+            )
