@@ -27,8 +27,6 @@ def game():
     from torch import from_numpy
     from numpy import array
 
-    
-
     if request.method == "GET":
         return render_template("game/game.html")
     elif request.method == "POST":

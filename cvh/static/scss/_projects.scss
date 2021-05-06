@@ -1,17 +1,31 @@
-.projects {
+    .projects {
+        /*height: 100vh;
     display: flex;
-    text-align: center;
-    ul {
-        padding: 10px;
-        flex-basis: 15%;
-        border: 1px solid black;
+    background-image: $bck-img-2;
+    background-size: cover;
+    opacity: 0.75;*/
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 15%;
+            //border: 1px solid black;
+            align-items: flex-start;
+            justify-content: center;
+            align-content: space-between;
+        }
+        &__texts {
+            //flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 3em;
+        }
+        li {
+            padding: 3em;
+        }
+        img {
+            padding: 20px;
+            margin: 5px;
+        }
     }
-    &__grid__a {}
-    &__grid__b {}
-    &__grid__c {}
-    &__grid__d {}
-    img {
-        padding: 20px;
-        margin: 5px;
-    }
-}
