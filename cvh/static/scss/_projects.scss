@@ -1,31 +1,41 @@
-    .projects {
-        /*height: 100vh;
-    display: flex;
-    background-image: $bck-img-2;
-    background-size: cover;
-    opacity: 0.75;*/
-        ul {
-            list-style-type: none;
-            display: flex;
-            flex-wrap: wrap;
-            flex-basis: 15%;
-            //border: 1px solid black;
-            align-items: flex-start;
-            justify-content: center;
-            align-content: space-between;
+        .projects {
+            background-image: $prj-bck;
+            background-size: cover;
+            background-repeat: no-repeat;
+            ul {
+                list-style-type: none;
+                display: flex;
+                flex-wrap: wrap;
+                flex-basis: 15%;
+                align-items: flex-start;
+                justify-content: center;
+                align-content: space-between;
+            }
+            &__texts {
+                //flex-wrap: wrap;
+                display: flex;
+                position: relative;
+                z-index: 1;
+                font-size: larger;
+                align-items: stretch;
+                justify-content: center;
+                padding-bottom: 7px;
+                color: set-text-color($secondary-color);
+                @include linear-gradient(to right, rgb(255, 228, 105), rgb(172, 10, 172));
+            }
+            li {
+                padding: 3em;
+            }
+            img {
+                @include linear-gradient(to right, rgb(255, 228, 105), rgb(172, 10, 172));
+                opacity: 1;
+                &:hover {
+                    background-color: $secondary-color;
+                    @include transition-ease;
+                    opacity: 1;
+                    border: 10px solid black;
+                    padding: 20px;
+                    border-radius: 15em;
+                }
+            }
         }
-        &__texts {
-            //flex-wrap: wrap;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 3em;
-        }
-        li {
-            padding: 3em;
-        }
-        img {
-            padding: 20px;
-            margin: 5px;
-        }
-    }

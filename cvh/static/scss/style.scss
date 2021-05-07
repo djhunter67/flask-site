@@ -30,7 +30,7 @@
     color: set-text-color($letter-color);
     @include linear-gradient(to right, rgb(255, 228, 105), rgb(172, 10, 172));
     width: 100%;
-    margin-top: 40px;
+    //margin-top: 40px;
 }
 
 .button {

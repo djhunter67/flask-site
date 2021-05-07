@@ -1,19 +1,15 @@
 .home {
     height: 100vh;
-    position: relative;
     background: $secondary-color;
-    overflow: hidden;
     content: ' ';
-    position: absolute;
     opacity: 0.75;
     background-image: $bck-img;
     background-size: cover;
-    z-index: 2;
-    &__header {
-        h1 {
-            color: $secondary-color;
-            z-index: 1;
-        }
+    z-index: -1;
+    &__head {
+        color: white;
+        z-index: 1;
+        border: solid 1px black
     }
     &__icons {
         &__row {

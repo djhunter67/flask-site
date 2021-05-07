@@ -3,9 +3,9 @@
     justify-content: center;
     height: 100%;
     &__bio__image {
-        height: 50vh;
+        height: 70vh;
         width: 100%;
-        background-image: $bck-img;
+        background-image: $bck-img_smll;
         background-size: cover;
         background-color: linear-gradient(rbga(243, 79, 243, 0.9), rgba(238, 235, 87, 0.3));
         display: flex;
@@ -22,6 +22,21 @@
         p {
             @include linear-gradient(rgba(231, 140, 140, 0.61), rgb(255, 255, 255));
             color: $letter-color;
+        }
+    }
+    .experience {
+        //@include linear-gradient(rgba(230, 84, 84, 0.61), rgb(255, 255, 255));
+        @include linear-gradient(rgb(255, 255, 255), rgba(211, 87, 87, 0.61), );
+        margin: 0 0;
+        &__jobs {
+            margin: 0 1em;
+            display: flex;
+            flex-direction: column;
+            &__job {
+                padding: 2em 0;
+                //border: 5px solid black;
+                //margin: 5px 0;
+            }
         }
     }
 }
