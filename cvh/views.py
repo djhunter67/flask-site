@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request
-from game.game_tab import game_file, dev, info, time_to_calc
 
 # from .models import Data
 # from . import db
@@ -22,6 +21,7 @@ def about():
     return render_template("about/about.html")
 
 
+"""
 @views.route("/game", methods=["GET", "POST"])
 def game():
     from torch import from_numpy
@@ -44,3 +44,6 @@ def game():
             return render_template(
                 "game/game.html", game_holder="INVALID INPUT", info=""
             )
+"""
+
+
