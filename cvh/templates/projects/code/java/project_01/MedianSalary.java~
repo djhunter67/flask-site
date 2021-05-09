@@ -1,0 +1,95 @@
+/*
+Programming Project 01
+ACO 101 -Intro to Computer Science
+Christeprher Hunter
+21 JAN 2021
+*/
+
+//import static org.junit.Assert.assertEquals;
+
+import java.util.Scanner;
+
+//import org.graalvm.compiler.asm.aarch64.AArch64Assembler.SystemRegister;
+
+//import org.junit.Test;
+
+public class MedianSalary {
+
+    // Console color in order to highlight text
+    //
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_RESET = "\u001B[0m";
+    
+    
+           
+    public static void main(String[] args){
+
+        // Take in the career and income of the user
+        //
+        Scanner input = new Scanner(System.in);
+        
+        String careerIncome;
+        int income;
+        int tooManyCommas;
+
+        do {
+            System.out.print("Please enter(title $salary): ");
+            careerIncome = input.nextLine();
+            tooManyCommas = careerIncome.indexOf(",") + careerIncome.lastIndexOf(",");
+            
+            income = careerIncome.indexOf("$");
+            int comma = careerIncome.indexOf(",");
+            String incomeString = careerIncome.substring(income + 1, comma) + 
+            careerIncome.substring(comma + 1);
+            
+            // Apparently arbitrarily saving the career...
+            //
+            String career = careerIncome.substring(0, income - 1);
+            
+            // Catch no dollar sign symbol entered
+            //
+            if (!careerIncome.contains("$")) {
+                System.out.printf("%n%nInvalid input - no $: %s%n", careerIncome);
+            // Catch if no commas were entered
+            //    
+            } else if (!careerIncome.contains(",")) {
+                System.out.printf("%n%nInvalid input - comma issue: %s%n", careerIncome);
+            // Catch if too many commas were entered
+            //
+            } else if (tooManyCommas - 19 != 1) {
+                System.out.printf("%n%nInvalid input - too many comma issue: %s%n", careerIncome);
+            // Check for 'not digits' and store values separately
+            //
+            } else {
+                
+                int actualIncome = Integer.parseInt(incomeString);
+
+                // Retain the highest income entered
+                //
+                if (actualIncome > actualIncome - 1) {
+                    int incomeHigh = actualIncome;
+                    System.out.print(incomeHigh);
+                }
+                
+                System.out.printf("%nmoney as an integer: %d%n", actualIncome); 
+            }        
+        } while (!(careerIncome.isEmpty())); 
+
+        input.close();
+
+        System.out.printf("%n%nWhile loop closed...");
+
+        // Parse the career String and income String
+        //
+
+        // Turn the income String into integers
+        //
+
+
+   }
+    /*
+    @Test
+    public void pracTest() {
+        assertEquals(Careers, "John");
+    }*/
+}
