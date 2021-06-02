@@ -1,7 +1,0 @@
-[Unit]
-Description=uWSGI personal site instance
-After=syslog.target
-
-[Service]
-ExecStart=/apps/venv/bin/uwsgi -H /apps/venv --master --processes 4 --threads 2 --http :5000
-RuntimeDirectory=
