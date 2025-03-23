@@ -52,7 +52,7 @@ sudo systemctl start main
 sudo systemctl status main
 sudo systemctl enable main
 
-# Setup the public facinf server
+# Setup the public facing server
 sudo apt install -y nginx
 
 # rm default nginx page
